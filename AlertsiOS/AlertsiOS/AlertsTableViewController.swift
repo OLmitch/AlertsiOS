@@ -15,11 +15,11 @@ class AlertsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var alertSample1 = Alert(name: "Test alert #1", emailSubject: "This is test alert #1's email subject", dateTime: NSDate(), markedAsRead: false)
-        var alertSample2 = Alert(name: "Test alert #2", emailSubject: "This is test alert #2's email subject", dateTime: NSDate(), markedAsRead: false)
-        var alertSample3 = Alert(name: "Test alert #3", emailSubject: "This is test alert #3's email subject", dateTime: NSDate(), markedAsRead: false)
-        var alertSample4 = Alert(name: "Test alert #4", emailSubject: "This is test alert #4's email subject", dateTime: NSDate(), markedAsRead: false)
-        var alertSample5 = Alert(name: "Test alert #5", emailSubject: "This is test alert #5's email subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample1 = Alert(name: "Test alert #1", emailSubject: "This is a test alert #1's subject This is a test alert #1's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample2 = Alert(name: "Test alert #2", emailSubject: "This is a test alert #2's subject This is a test alert #2's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample3 = Alert(name: "Test alert #3", emailSubject: "This is a test alert #3's subject This is a test alert #3's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample4 = Alert(name: "Test alert #4", emailSubject: "This is a test alert #4's subject This is a test alert #4's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample5 = Alert(name: "Test alert #5", emailSubject: "This is a test alert #5's subject This is a test alert #5's subject", dateTime: NSDate(), markedAsRead: false)
         
         alertsArray.append(alertSample1)
         alertsArray.append(alertSample2)
@@ -54,7 +54,7 @@ class AlertsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! AlertsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! AlertsTableViewCell
         
         let alert = alertsArray[indexPath.row]
         
@@ -100,14 +100,19 @@ class AlertsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Show Alert Comment Cards" {
+            let alertCommentCardTableViewController = segue.destinationViewController as! AlertCommentCardTableViewController
+            
+            if let index = self.tableView.indexPathForSelectedRow() {
+                alertCommentCardTableViewController.selectedAlert = alertsArray[index.row]
+            }
+        }
+        
     }
-    */
 
 }
