@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		810B061D1B9558E6004CB49B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811078151B60CA6100F90C30 /* Main.storyboard */; };
-		810B061F1B955C0D004CB49B /* AlertCommentCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B061E1B955C0D004CB49B /* AlertCommentCardTableViewController.swift */; };
-		810B06211B955F01004CB49B /* AlertCommentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06201B955F01004CB49B /* AlertCommentCard.swift */; };
-		810B06231B95618C004CB49B /* AlertCommentCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06221B95618C004CB49B /* AlertCommentCardTableViewCell.swift */; };
-		810B06251B9561A2004CB49B /* AlertCommentCardHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06241B9561A2004CB49B /* AlertCommentCardHeaderTableViewCell.swift */; };
+		810B061F1B955C0D004CB49B /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B061E1B955C0D004CB49B /* FeedbackTableViewController.swift */; };
+		810B06211B955F01004CB49B /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06201B955F01004CB49B /* Feedback.swift */; };
+		810B06231B95618C004CB49B /* FeedbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06221B95618C004CB49B /* FeedbackTableViewCell.swift */; };
+		810B06251B9561A2004CB49B /* FeedbackHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06241B9561A2004CB49B /* FeedbackHeaderTableViewCell.swift */; };
 		811078121B60CA6100F90C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078111B60CA6100F90C30 /* AppDelegate.swift */; };
 		811078191B60CA6100F90C30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811078181B60CA6100F90C30 /* Images.xcassets */; };
 		811078281B60CA6100F90C30 /* AlertsiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078271B60CA6100F90C30 /* AlertsiOSTests.swift */; };
 		811078361B60CAFD00F90C30 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078311B60CAFD00F90C30 /* Alert.swift */; };
 		811078371B60CAFD00F90C30 /* AlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078321B60CAFD00F90C30 /* AlertsTableViewCell.swift */; };
 		811078381B60CAFD00F90C30 /* AlertsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078331B60CAFD00F90C30 /* AlertsTableViewController.swift */; };
-		811078391B60CAFD00F90C30 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078341B60CAFD00F90C30 /* Feedback.swift */; };
 		8110783A1B60CAFD00F90C30 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811078351B60CAFD00F90C30 /* SettingsTableViewController.swift */; };
 		8110783D1B60CE5C00F90C30 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8110783C1B60CD1B00F90C30 /* fontawesome-webfont.ttf */; };
 /* End PBXBuildFile section */
@@ -34,10 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		810B061E1B955C0D004CB49B /* AlertCommentCardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCommentCardTableViewController.swift; sourceTree = "<group>"; };
-		810B06201B955F01004CB49B /* AlertCommentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCommentCard.swift; sourceTree = "<group>"; };
-		810B06221B95618C004CB49B /* AlertCommentCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCommentCardTableViewCell.swift; sourceTree = "<group>"; };
-		810B06241B9561A2004CB49B /* AlertCommentCardHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCommentCardHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		810B061E1B955C0D004CB49B /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewController.swift; sourceTree = "<group>"; };
+		810B06201B955F01004CB49B /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		810B06221B95618C004CB49B /* FeedbackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewCell.swift; sourceTree = "<group>"; };
+		810B06241B9561A2004CB49B /* FeedbackHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		8110780C1B60CA6100F90C30 /* AlertsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		811078101B60CA6100F90C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		811078111B60CA6100F90C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		811078311B60CAFD00F90C30 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		811078321B60CAFD00F90C30 /* AlertsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsTableViewCell.swift; sourceTree = "<group>"; };
 		811078331B60CAFD00F90C30 /* AlertsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsTableViewController.swift; sourceTree = "<group>"; };
-		811078341B60CAFD00F90C30 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		811078351B60CAFD00F90C30 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8110783C1B60CD1B00F90C30 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -97,13 +95,12 @@
 				811078151B60CA6100F90C30 /* Main.storyboard */,
 				811078111B60CA6100F90C30 /* AppDelegate.swift */,
 				811078311B60CAFD00F90C30 /* Alert.swift */,
-				810B06201B955F01004CB49B /* AlertCommentCard.swift */,
-				810B061E1B955C0D004CB49B /* AlertCommentCardTableViewController.swift */,
-				810B06221B95618C004CB49B /* AlertCommentCardTableViewCell.swift */,
-				810B06241B9561A2004CB49B /* AlertCommentCardHeaderTableViewCell.swift */,
+				810B06201B955F01004CB49B /* Feedback.swift */,
 				811078321B60CAFD00F90C30 /* AlertsTableViewCell.swift */,
 				811078331B60CAFD00F90C30 /* AlertsTableViewController.swift */,
-				811078341B60CAFD00F90C30 /* Feedback.swift */,
+				810B061E1B955C0D004CB49B /* FeedbackTableViewController.swift */,
+				810B06221B95618C004CB49B /* FeedbackTableViewCell.swift */,
+				810B06241B9561A2004CB49B /* FeedbackHeaderTableViewCell.swift */,
 				811078351B60CAFD00F90C30 /* SettingsTableViewController.swift */,
 				811078181B60CA6100F90C30 /* Images.xcassets */,
 				8110781A1B60CA6100F90C30 /* LaunchScreen.xib */,
@@ -239,15 +236,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				811078361B60CAFD00F90C30 /* Alert.swift in Sources */,
-				811078391B60CAFD00F90C30 /* Feedback.swift in Sources */,
 				811078371B60CAFD00F90C30 /* AlertsTableViewCell.swift in Sources */,
 				811078121B60CA6100F90C30 /* AppDelegate.swift in Sources */,
 				811078381B60CAFD00F90C30 /* AlertsTableViewController.swift in Sources */,
-				810B06231B95618C004CB49B /* AlertCommentCardTableViewCell.swift in Sources */,
-				810B061F1B955C0D004CB49B /* AlertCommentCardTableViewController.swift in Sources */,
-				810B06211B955F01004CB49B /* AlertCommentCard.swift in Sources */,
+				810B06231B95618C004CB49B /* FeedbackTableViewCell.swift in Sources */,
+				810B061F1B955C0D004CB49B /* FeedbackTableViewController.swift in Sources */,
+				810B06211B955F01004CB49B /* Feedback.swift in Sources */,
 				8110783A1B60CAFD00F90C30 /* SettingsTableViewController.swift in Sources */,
-				810B06251B9561A2004CB49B /* AlertCommentCardHeaderTableViewCell.swift in Sources */,
+				810B06251B9561A2004CB49B /* FeedbackHeaderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

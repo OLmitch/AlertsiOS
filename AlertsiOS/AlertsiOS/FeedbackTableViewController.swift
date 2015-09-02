@@ -1,5 +1,5 @@
 //
-//  AlertsSummaryTableViewController.swift
+//  FeedbackTableViewController.swift
 //  AlertsiOS
 //
 //  Created by Mitchell Downey on 8/31/15.
@@ -9,26 +9,28 @@
 import UIKit
 import QuartzCore
 
-class AlertCommentCardTableViewController: UITableViewController {
+class FeedbackTableViewController: UITableViewController {
     
-    var alertCommentCardArray = [AlertCommentCard]()
+    var FeedbackArray = [Feedback]()
     
-    var selectedAlert: Alert!
+    var selectedAlert: Alert?
+    
+    var sampleURL : NSURL = NSURL(string: "http://www.opinionlab.com")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var alertCommentCardSample1 = AlertCommentCard(name: "Test alert #1", emailSubject: "This is a test alert #1's subject", dateTime: NSDate(), markedAsRead: false)
-        var alertCommentCardSample2 = AlertCommentCard(name: "Test alert #2", emailSubject: "This is a test alert #2's subject", dateTime: NSDate(), markedAsRead: false)
-        var alertCommentCardSample3 = AlertCommentCard(name: "Test alert #3", emailSubject: "This is a test alert #3's subject", dateTime: NSDate(), markedAsRead: false)
-        var alertCommentCardSample4 = AlertCommentCard(name: "Test alert #4", emailSubject: "This is a test alert #4's subject", dateTime: NSDate(), markedAsRead: false)
-        var alertCommentCardSample5 = AlertCommentCard(name: "Test alert #5", emailSubject: "This is a test alert #5's subject", dateTime: NSDate(), markedAsRead: false)
+        var FeedbackSample1 = Feedback(overallRating: 5, comments: "This is a test alert #1's subject", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample2 = Feedback(overallRating: 5, comments: "This is a test alert #2's subject", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample3 = Feedback(overallRating: 5, comments: "This is a test alert #3's subject", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample4 = Feedback(overallRating: 5, comments: "This is a test alert #4's subject", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample5 = Feedback(overallRating: 5, comments: "This is a test alert #5's subject", dateTime: NSDate(), reportedURL: sampleURL)
         
-        alertCommentCardArray.append(alertCommentCardSample1)
-        alertCommentCardArray.append(alertCommentCardSample2)
-        alertCommentCardArray.append(alertCommentCardSample3)
-        alertCommentCardArray.append(alertCommentCardSample4)
-        alertCommentCardArray.append(alertCommentCardSample5)
+        FeedbackArray.append(FeedbackSample1)
+        FeedbackArray.append(FeedbackSample2)
+        FeedbackArray.append(FeedbackSample3)
+        FeedbackArray.append(FeedbackSample4)
+        FeedbackArray.append(FeedbackSample5)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,9 +41,9 @@ class AlertCommentCardTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! AlertCommentCardHeaderTableViewCell
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! FeedbackHeaderTableViewCell
         
-        headerCell.emailSubject?.text = selectedAlert.emailSubject
+        headerCell.emailSubject?.text = selectedAlert!.emailSubject
         headerCell.dateTime?.text = "07/23/15 - 7:30 PM"
         headerCell.tintColor = UIColor.redColor()
         
@@ -64,7 +66,7 @@ class AlertCommentCardTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return alertCommentCardArray.count
+        return FeedbackArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

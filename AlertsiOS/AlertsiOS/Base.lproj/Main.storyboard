@@ -145,7 +145,7 @@
                                     <outlet property="dateTime" destination="IDK-0r-pZB" id="QEL-nd-UEH"/>
                                     <outlet property="emailSubject" destination="r9R-hh-XhP" id="y8C-pz-wlj"/>
                                     <outlet property="notificationIcon" destination="2dP-IC-RqH" id="CfC-s9-aDC"/>
-                                    <segue destination="aFQ-iA-osz" kind="show" identifier="Show Alert Comment Cards" id="Wxh-7L-GGW"/>
+                                    <segue destination="aFQ-iA-osz" kind="show" identifier="Show Feedback List" id="Wxh-7L-GGW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -160,16 +160,16 @@
             </objects>
             <point key="canvasLocation" x="1955" y="395"/>
         </scene>
-        <!--Alert Comment Card Table View Controller-->
+        <!--Feedback Table View Controller-->
         <scene sceneID="ezX-ls-gzU">
             <objects>
-                <tableViewController id="aFQ-iA-osz" customClass="AlertCommentCardTableViewController" customModule="AlertsiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aFQ-iA-osz" customClass="FeedbackTableViewController" customModule="AlertsiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="4iG-eg-sg8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="HeaderCell" id="Z4k-mg-tdQ" customClass="AlertCommentCardHeaderTableViewCell" customModule="AlertsiOS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="HeaderCell" id="Z4k-mg-tdQ" customClass="FeedbackHeaderTableViewCell" customModule="AlertsiOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4k-mg-tdQ" id="Rca-Xo-Irc">
@@ -203,19 +203,19 @@
                                     <outlet property="emailSubject" destination="lDS-NF-xgW" id="KUQ-ry-exv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="110" id="QQl-9K-eFL" customClass="AlertCommentCardTableViewCell" customModule="AlertsiOS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="110" id="QQl-9K-eFL" customClass="FeedbackTableViewCell" customModule="AlertsiOS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQl-9K-eFL" id="HsN-fz-a32">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date/Time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-bO-ON8">
-                                            <rect key="frame" x="42" y="33" width="550" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-bO-ON8">
+                                            <rect key="frame" x="42" y="33" width="517" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reported URL" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-2j-IOp">
-                                            <rect key="frame" x="42" y="49" width="550" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reported URL" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-2j-IOp">
+                                            <rect key="frame" x="42" y="49" width="517" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -229,8 +229,8 @@
                                             <color key="textColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alert Comment Card Comments" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYp-Id-LYy">
-                                            <rect key="frame" x="42" y="8" width="550" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYp-Id-LYy">
+                                            <rect key="frame" x="42" y="8" width="517" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>

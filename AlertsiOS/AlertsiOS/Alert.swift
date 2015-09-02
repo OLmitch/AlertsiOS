@@ -15,7 +15,7 @@ class Alert: NSObject {
     var dateTime : NSDate = NSDate()
     var markedAsRead : Bool = Bool()
     
-    var feedback : [Feedback]? = [Feedback]()
+    var feedback = [Feedback]()
     
     init(name : String, emailSubject : String, dateTime: NSDate, markedAsRead: Bool) {
         self.name = name

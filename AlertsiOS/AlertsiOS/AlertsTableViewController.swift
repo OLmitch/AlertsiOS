@@ -105,11 +105,11 @@ class AlertsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "Show Alert Comment Cards" {
-            let alertCommentCardTableViewController = segue.destinationViewController as! AlertCommentCardTableViewController
+        if segue.identifier == "Show Feedback List" {
+            let feedbackTableViewController = segue.destinationViewController as! FeedbackTableViewController
             
             if let index = self.tableView.indexPathForSelectedRow() {
-                alertCommentCardTableViewController.selectedAlert = alertsArray[index.row]
+                feedbackTableViewController.selectedAlert = alertsArray[index.row]
             }
         }
         

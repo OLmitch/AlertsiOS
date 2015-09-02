@@ -1,5 +1,5 @@
 //
-//  AlertCommentCardHeaderTableViewCell.swift
+//  FeedbackTableViewCell.swift
 //  AlertsiOS
 //
 //  Created by Mitchell Downey on 8/31/15.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class AlertCommentCardHeaderTableViewCell: UITableViewCell {
+class FeedbackTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var emailSubject: UILabel!
-    @IBOutlet weak var dateTime: UILabel!
-    
     override func awakeFromNib() {
-        super.awakeFromNib()        
+        super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
