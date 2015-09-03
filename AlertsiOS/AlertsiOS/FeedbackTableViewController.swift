@@ -11,7 +11,7 @@ import QuartzCore
 
 class FeedbackTableViewController: UITableViewController {
     
-    var FeedbackArray = [Feedback]()
+    var feedbackArray = [Feedback]()
     
     var selectedAlert: Alert?
     
@@ -20,17 +20,27 @@ class FeedbackTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var FeedbackSample1 = Feedback(overallRating: 5, comments: "This is a test alert #1's subject", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample2 = Feedback(overallRating: 5, comments: "This is a test alert #2's subject", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample3 = Feedback(overallRating: 5, comments: "This is a test alert #3's subject", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample4 = Feedback(overallRating: 5, comments: "This is a test alert #4's subject", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample5 = Feedback(overallRating: 5, comments: "This is a test alert #5's subject", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample1 = Feedback(overallRating: 5, comments: "This is test feedback #1's comments. This is test feedback #1's comments. This is test feedback #1's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample2 = Feedback(overallRating: 5, comments: "This is test feedback #2's comments. This is test feedback #2's comments. This is test feedback #2's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample3 = Feedback(overallRating: 5, comments: "This is test feedback #3's comments. This is test feedback #3's comments. This is test feedback #3's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample4 = Feedback(overallRating: 5, comments: "This is test feedback #4's comments. This is test feedback #4's comments. This is test feedback #4's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample5 = Feedback(overallRating: 5, comments: "This is test feedback #5's comments. This is test feedback #5's comments. This is test feedback #5's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample6 = Feedback(overallRating: 5, comments: "This is test feedback #6's comments. This is test feedback #6's comments. This is test feedback #6's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample7 = Feedback(overallRating: 5, comments: "This is test feedback #7's comments. This is test feedback #7's comments. This is test feedback #7's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample8 = Feedback(overallRating: 5, comments: "This is test feedback #8's comments. This is test feedback #8's comments. This is test feedback #8's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample9 = Feedback(overallRating: 5, comments: "This is test feedback #9's comments. This is test feedback #9's comments. This is test feedback #9's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var FeedbackSample10 = Feedback(overallRating: 5, comments: "This is test feedback #10's comments. This is test feedback #10's comments. This is test feedback #10's comments.", dateTime: NSDate(), reportedURL: sampleURL)
         
-        FeedbackArray.append(FeedbackSample1)
-        FeedbackArray.append(FeedbackSample2)
-        FeedbackArray.append(FeedbackSample3)
-        FeedbackArray.append(FeedbackSample4)
-        FeedbackArray.append(FeedbackSample5)
+        feedbackArray.append(FeedbackSample1)
+        feedbackArray.append(FeedbackSample2)
+        feedbackArray.append(FeedbackSample3)
+        feedbackArray.append(FeedbackSample4)
+        feedbackArray.append(FeedbackSample5)
+        feedbackArray.append(FeedbackSample6)
+        feedbackArray.append(FeedbackSample7)
+        feedbackArray.append(FeedbackSample8)
+        feedbackArray.append(FeedbackSample9)
+        feedbackArray.append(FeedbackSample10)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,14 +76,20 @@ class FeedbackTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return FeedbackArray.count
+        return feedbackArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FeedbackTableViewCell
 
         // Configure the cell...
-
+        
+        let feedback = feedbackArray[indexPath.row]
+        
+        cell.comments?.text = feedback.comments
+        cell.dateTime?.text = "07/23/15 - 7:30 PM"
+        cell.reportedURL?.text = "http://www.opinionlab.com"
+        
         return cell
     }
     
@@ -120,8 +136,16 @@ class FeedbackTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Show Feedback" {
+            let feedbackViewController = segue.destinationViewController as! FeedbackViewController
+            
+            if let index = self.tableView.indexPathForSelectedRow() {
+                feedbackViewController.selectedFeedback = feedbackArray[index.row]
+                feedbackViewController.selectedAlert = selectedAlert
+            }
+        }
+        
     }
 
 }

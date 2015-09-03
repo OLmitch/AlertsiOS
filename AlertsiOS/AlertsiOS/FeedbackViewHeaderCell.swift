@@ -1,18 +1,14 @@
 //
-//  FeedbackTableViewCell.swift
+//  FeedbackViewHeaderCell.swift
 //  AlertsiOS
 //
-//  Created by Mitchell Downey on 8/31/15.
+//  Created by Mitchell Downey on 9/2/15.
 //  Copyright (c) 2015 Mitchell Downey. All rights reserved.
 //
 
 import UIKit
 
-class FeedbackTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var comments: UILabel!
-    @IBOutlet weak var dateTime: UILabel!
-    @IBOutlet weak var reportedURL: UILabel!
+class FeedbackViewHeaderCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()

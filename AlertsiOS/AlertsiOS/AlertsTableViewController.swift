@@ -20,12 +20,22 @@ class AlertsTableViewController: UITableViewController {
         var alertSample3 = Alert(name: "Test alert #3", emailSubject: "This is a test alert #3's subject This is a test alert #3's subject", dateTime: NSDate(), markedAsRead: false)
         var alertSample4 = Alert(name: "Test alert #4", emailSubject: "This is a test alert #4's subject This is a test alert #4's subject", dateTime: NSDate(), markedAsRead: false)
         var alertSample5 = Alert(name: "Test alert #5", emailSubject: "This is a test alert #5's subject This is a test alert #5's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample6 = Alert(name: "Test alert #6", emailSubject: "This is a test alert #6's subject This is a test alert #6's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample7 = Alert(name: "Test alert #7", emailSubject: "This is a test alert #7's subject This is a test alert #7's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample8 = Alert(name: "Test alert #8", emailSubject: "This is a test alert #8's subject This is a test alert #8's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample9 = Alert(name: "Test alert #9", emailSubject: "This is a test alert #9's subject This is a test alert #9's subject", dateTime: NSDate(), markedAsRead: false)
+        var alertSample10 = Alert(name: "Test alert #10", emailSubject: "This is a test alert #10's subject This is a test alert #10's subject", dateTime: NSDate(), markedAsRead: false)
         
         alertsArray.append(alertSample1)
         alertsArray.append(alertSample2)
         alertsArray.append(alertSample3)
         alertsArray.append(alertSample4)
         alertsArray.append(alertSample5)
+        alertsArray.append(alertSample6)
+        alertsArray.append(alertSample7)
+        alertsArray.append(alertSample8)
+        alertsArray.append(alertSample9)
+        alertsArray.append(alertSample10)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
