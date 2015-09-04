@@ -254,7 +254,7 @@
                                 <connections>
                                     <outlet property="comments" destination="PYp-Id-LYy" id="0xe-cV-os3"/>
                                     <outlet property="dateTime" destination="hD3-bO-ON8" id="jkF-hw-jGh"/>
-                                    <outlet property="reportedURL" destination="RoH-2j-IOp" id="5PG-Uj-hcV"/>
+                                    <outlet property="referer" destination="RoH-2j-IOp" id="5PG-Uj-hcV"/>
                                     <segue destination="GT9-kP-765" kind="show" identifier="Show Feedback" id="uyW-tX-jZZ"/>
                                 </connections>
                             </tableViewCell>
@@ -305,7 +305,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ReportedURL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-dI-L45">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="referer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-dI-L45">
                                 <rect key="frame" x="8" y="257" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

@@ -17,19 +17,34 @@ class FeedbackTableViewController: UITableViewController {
     
     var sampleURL : NSURL = NSURL(string: "http://www.opinionlab.com")!
     
+    var sampleCustomVars: NSDictionary = ["username": "abc123xyz", "tealeafID": "123456790", "omnitureID": "0987654321", "customVariable4": "testing 123", "customVariable5": "etc etc etc"]
+    
+    var sampleComment = "This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var FeedbackSample1 = Feedback(overallRating: 5, comments: "This is test feedback #1's comments. This is test feedback #1's comments. This is test feedback #1's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample2 = Feedback(overallRating: 5, comments: "This is test feedback #2's comments. This is test feedback #2's comments. This is test feedback #2's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample3 = Feedback(overallRating: 5, comments: "This is test feedback #3's comments. This is test feedback #3's comments. This is test feedback #3's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample4 = Feedback(overallRating: 5, comments: "This is test feedback #4's comments. This is test feedback #4's comments. This is test feedback #4's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample5 = Feedback(overallRating: 5, comments: "This is test feedback #5's comments. This is test feedback #5's comments. This is test feedback #5's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample6 = Feedback(overallRating: 5, comments: "This is test feedback #6's comments. This is test feedback #6's comments. This is test feedback #6's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample7 = Feedback(overallRating: 5, comments: "This is test feedback #7's comments. This is test feedback #7's comments. This is test feedback #7's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample8 = Feedback(overallRating: 5, comments: "This is test feedback #8's comments. This is test feedback #8's comments. This is test feedback #8's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample9 = Feedback(overallRating: 5, comments: "This is test feedback #9's comments. This is test feedback #9's comments. This is test feedback #9's comments.", dateTime: NSDate(), reportedURL: sampleURL)
-        var FeedbackSample10 = Feedback(overallRating: 5, comments: "This is test feedback #10's comments. This is test feedback #10's comments. This is test feedback #10's comments.", dateTime: NSDate(), reportedURL: sampleURL)
+        var ccid : Int = Int()
+        var dateTime : NSDate = NSDate()
+        var prev : NSURL = NSURL()
+        var referer : NSURL = NSURL()
+        var currentURL : NSURL = NSURL()
+        var oCodeVersion : String = String()
+        var customVars : NSObject = NSObject()
+        var overallRating : Int = Int()
+        var comments : String = String()
+        
+        var FeedbackSample1 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample2 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample3 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample4 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample5 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample6 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample7 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample8 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample9 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+        var FeedbackSample10 = Feedback(ccid: 12345, dateTime: NSDate(), prev: sampleURL, referer: sampleURL, currentURL: sampleURL, oCodeVersion: "6.0", customVars: sampleCustomVars, overallRating: 5, comments: sampleComment)
+
         
         feedbackArray.append(FeedbackSample1)
         feedbackArray.append(FeedbackSample2)
@@ -88,7 +103,7 @@ class FeedbackTableViewController: UITableViewController {
         
         cell.comments?.text = feedback.comments
         cell.dateTime?.text = "07/23/15 - 7:30 PM"
-        cell.reportedURL?.text = "http://www.opinionlab.com"
+        cell.referer?.text = "http://www.opinionlab.com"
         
         return cell
     }

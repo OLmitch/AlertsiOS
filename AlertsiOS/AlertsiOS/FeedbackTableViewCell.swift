@@ -12,7 +12,7 @@ class FeedbackTableViewCell: UITableViewCell {
 
     @IBOutlet weak var comments: UILabel!
     @IBOutlet weak var dateTime: UILabel!
-    @IBOutlet weak var reportedURL: UILabel!
+    @IBOutlet weak var referer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
