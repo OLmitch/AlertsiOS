@@ -69,7 +69,7 @@ class FeedbackTableViewController: UITableViewController {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! FeedbackHeaderTableViewCell
         
         headerCell.emailSubject?.text = selectedAlert!.emailSubject
-        headerCell.dateTime?.text = "07/23/15 - 7:30 PM"
+        headerCell.dateTime?.text = "07/23/15 10:30PM - 07/23/15 11:45PM"
         headerCell.tintColor = UIColor.redColor()
         
 //        headerCell.layer.borderWidth = 0.5
@@ -101,9 +101,10 @@ class FeedbackTableViewController: UITableViewController {
         
         let feedback = feedbackArray[indexPath.row]
         
+//        cell.overallRating?.text = feedback.overallRating
         cell.comments?.text = feedback.comments
         cell.dateTime?.text = "07/23/15 - 7:30 PM"
-        cell.referer?.text = "http://www.opinionlab.com"
+        cell.referer?.text = feedback.referer.absoluteString
         
         return cell
     }

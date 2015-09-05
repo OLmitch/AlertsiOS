@@ -69,7 +69,7 @@ class AlertsTableViewController: UITableViewController {
         let alert = alertsArray[indexPath.row]
         
         cell.emailSubject?.text = alert.emailSubject
-        cell.dateTime?.text = "07/23/15 - 7:30 PM"
+        cell.dateTime?.text = "07/23/15 10:30PM - 07/23/15 11:45PM"
         cell.notificationIcon?.text = "\u{f071}"
 
         return cell
