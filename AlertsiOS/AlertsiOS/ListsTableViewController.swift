@@ -1,5 +1,5 @@
 //
-//  SavedTableViewController.swift
+//  ListsTableViewController.swift
 //  AlertsiOS
 //
 //  Created by Mitchell Downey on 9/7/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SavedTableViewController: UITableViewController {
+class ListsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

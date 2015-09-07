@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1251" y="389"/>
         </scene>
-        <!--Saved-->
+        <!--Lists-->
         <scene sceneID="UaM-6F-Sit">
             <objects>
-                <tableViewController id="png-Qb-kro" customClass="SavedTableViewController" customModule="AlertsiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="png-Qb-kro" customClass="ListsTableViewController" customModule="AlertsiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Ll-fD-2dO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,17 +116,17 @@
                             <outlet property="delegate" destination="png-Qb-kro" id="OBu-1T-Sxy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Saved" id="exN-7z-nnk"/>
+                    <navigationItem key="navigationItem" title="Lists" id="exN-7z-nnk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ga-wh-vDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1955" y="-318"/>
         </scene>
-        <!--Saved-->
+        <!--Lists-->
         <scene sceneID="5Kp-dw-d46">
             <objects>
                 <navigationController id="5PG-V7-Gmt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Saved" id="PFC-AR-Tjj"/>
+                    <tabBarItem key="tabBarItem" title="Lists" id="PFC-AR-Tjj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eUU-1H-6Zz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

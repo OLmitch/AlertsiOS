@@ -25,13 +25,34 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var feedbackReferer: UILabel!
     @IBOutlet weak var feedbackCustomVars: UILabel!
     
+    func addShareSaveButtonsToRightNav() {
+        let buttonSave = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        buttonSave.frame = CGRectMake(0, 0, 36, 40)
+        buttonSave.setTitle("Save", forState: UIControlState.Normal)
+        buttonSave.addTarget(self, action: "saveButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarButtonSave = UIBarButtonItem(customView: buttonSave)
+        
+        let buttonShare = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        buttonShare.frame = CGRectMake(60, 0, 60, 40)
+        buttonShare.setTitle("Share", forState: UIControlState.Normal)
+        buttonShare.addTarget(self, action: "shareButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarButtonShare = UIBarButtonItem(customView: buttonShare)
+        
+        self.navigationItem.setRightBarButtonItems([rightBarButtonSave, rightBarButtonShare], animated: true)
+    }
+    
+    func shareButtonAction() {
+        println("Share Button tapped")
+    }
+    
+    func saveButtonAction() {
+        println("Save Button tapped")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-//        alertEmailSubject.text = selectedFeedback!.comments
-//        alertDateTime.text = "07/23/15 - 7:30 PM to 07/23/15 11:45 PM"
+        addShareSaveButtonsToRightNav()
         
         var boldAttribute = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)]
         
@@ -71,6 +92,8 @@ class FeedbackViewController: UIViewController {
             customVarsFullLabel.appendAttributedString(customVarLabel)
         }
         feedbackCustomVars.attributedText = customVarsFullLabel
+        
+        
         
 //        for customVar in selectedFeedback!.customVars {
 //            println(customVar)
