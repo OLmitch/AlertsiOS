@@ -13,6 +13,8 @@ class FeedbackViewController: UIViewController {
     var selectedAlert: Alert?
     var selectedFeedback: Feedback?
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var alertEmailSubject: UILabel!
     @IBOutlet weak var alertDateTime: UILabel!
     
@@ -21,11 +23,13 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var feedbackDateTime: UILabel!
     @IBOutlet weak var feedbackCurrentURL: UILabel!
     @IBOutlet weak var feedbackReferer: UILabel!
+    @IBOutlet weak var feedbackCustomVars: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        
         alertEmailSubject.text = selectedFeedback!.comments
         alertDateTime.text = "07/23/15 - 7:30 PM to 07/23/15 11:45 PM"
         
@@ -56,12 +60,22 @@ class FeedbackViewController: UIViewController {
         var refererText = NSMutableAttributedString(string: selectedFeedback!.referer.absoluteString!)
         refererLabel.appendAttributedString(refererText)
         feedbackReferer.attributedText = refererLabel
-        
-        var customVarsLabel = NSMutableAttributedString(string: "CustomVars: ", attributes: boldAttribute)
-        
-        for customVar in selectedFeedback!.customVars {
-            println(customVar)
+
+        var customVarsFullLabel = NSMutableAttributedString(string: "Custom Variables \n", attributes: boldAttribute)
+        var objects = selectedFeedback!.customVars.allKeys as! [String]
+        objects = (selectedFeedback!.customVars.allKeys as! [String]).sorted(<)
+        for var i = 0; i < objects.count; ++i {
+            var customVarLabel = NSMutableAttributedString(string: objects[i] + ": ", attributes: boldAttribute)
+            var customVarText = NSMutableAttributedString(string: selectedFeedback!.customVars[objects[i]] as! String + "\n")
+            customVarLabel.appendAttributedString(customVarText)
+            customVarsFullLabel.appendAttributedString(customVarLabel)
         }
+        feedbackCustomVars.attributedText = customVarsFullLabel
+        
+//        for customVar in selectedFeedback!.customVars {
+//            println(customVar)
+//            
+//        }
         
     }
 
