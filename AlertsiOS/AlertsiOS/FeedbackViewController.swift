@@ -13,17 +13,7 @@ class FeedbackViewController: UIViewController {
     var selectedAlert: Alert?
     var selectedFeedback: Feedback?
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBOutlet weak var alertEmailSubject: UILabel!
-    @IBOutlet weak var alertDateTime: UILabel!
-    
-    @IBOutlet weak var feedbackOverallRating: UILabel!
-    @IBOutlet weak var feedbackComments: UILabel!
-    @IBOutlet weak var feedbackDateTime: UILabel!
-    @IBOutlet weak var feedbackCurrentURL: UILabel!
-    @IBOutlet weak var feedbackReferer: UILabel!
-    @IBOutlet weak var feedbackCustomVars: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     func addShareSaveButtonsToRightNav() {
         let buttonSave = UIButton.buttonWithType(UIButtonType.System) as! UIButton
@@ -54,51 +44,62 @@ class FeedbackViewController: UIViewController {
         
         addShareSaveButtonsToRightNav()
         
+        self.textView.textContainerInset = UIEdgeInsetsMake(0, 12, 16, 12)
+        self.textView.scrollRangeToVisible(NSMakeRange(0, 0))
+        
         var boldAttribute = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)]
+        var regularAttribute = [NSFontAttributeName: UIFont.systemFontOfSize(14)]
+        
+        var linebreakAttribute = [NSFontAttributeName: UIFont.systemFontOfSize(8)]
+        var linebreakText = NSMutableAttributedString(string: "\n", attributes: linebreakAttribute)
+        
+        var attributedText = NSMutableAttributedString(string: "")
         
         var overallRatingLabel = NSMutableAttributedString(string: "Overall Rating: ", attributes: boldAttribute)
-        var overallRatingText = NSMutableAttributedString(string: String(selectedFeedback!.overallRating))
+        var overallRatingText = NSMutableAttributedString(string: String(selectedFeedback!.overallRating) + "\n", attributes: regularAttribute)
         overallRatingLabel.appendAttributedString(overallRatingText)
-        feedbackOverallRating.attributedText = overallRatingLabel
+        attributedText.appendAttributedString(overallRatingLabel)
+        attributedText.appendAttributedString(linebreakText)
         
         var commentsLabel = NSMutableAttributedString(string: "Comments: ", attributes: boldAttribute)
-        var commentsText = NSMutableAttributedString(string: selectedFeedback!.comments)
+        var commentsText = NSMutableAttributedString(string: selectedFeedback!.comments + "\n", attributes: regularAttribute)
         commentsLabel.appendAttributedString(commentsText)
-        feedbackComments.attributedText = commentsLabel
+        attributedText.appendAttributedString(commentsLabel)
+        attributedText.appendAttributedString(linebreakText)
         
         var dateTimeLabel = NSMutableAttributedString(string: "Date/Time: ", attributes: boldAttribute)
-        var dateTimeText = NSMutableAttributedString(string: "07/23/15 - 7:30 PM")
+        var dateTimeText = NSMutableAttributedString(string: "07/23/15 - 7:30 PM" + "\n", attributes: regularAttribute)
         dateTimeLabel.appendAttributedString(dateTimeText)
 //        var dateTimeText = NSMutableAttributedString(string: selectedFeedback!.dateTime)
-        feedbackDateTime.attributedText = dateTimeLabel
+        attributedText.appendAttributedString(dateTimeLabel)
+        attributedText.appendAttributedString(linebreakText)
         
         var currentURLLabel = NSMutableAttributedString(string: "CurrentURL: ", attributes: boldAttribute)
-        var currentURLText = NSMutableAttributedString(string: selectedFeedback!.currentURL.absoluteString!)
+        var currentURLText = NSMutableAttributedString(string: selectedFeedback!.currentURL.absoluteString! + "\n", attributes: regularAttribute)
         currentURLLabel.appendAttributedString(currentURLText)
-        feedbackCurrentURL.attributedText = currentURLLabel
+        attributedText.appendAttributedString(currentURLLabel)
+        attributedText.appendAttributedString(linebreakText)
         
         var refererLabel = NSMutableAttributedString(string: "Referer: ", attributes: boldAttribute)
-        var refererText = NSMutableAttributedString(string: selectedFeedback!.referer.absoluteString!)
+        var refererText = NSMutableAttributedString(string: selectedFeedback!.referer.absoluteString! + "\n", attributes: regularAttribute)
         refererLabel.appendAttributedString(refererText)
-        feedbackReferer.attributedText = refererLabel
+        attributedText.appendAttributedString(refererLabel)
+        attributedText.appendAttributedString(linebreakText)
 
         var customVarsFullLabel = NSMutableAttributedString(string: "Custom Variables \n", attributes: boldAttribute)
         var objects = selectedFeedback!.customVars.allKeys as! [String]
         objects = (selectedFeedback!.customVars.allKeys as! [String]).sorted(<)
         for var i = 0; i < objects.count; ++i {
             var customVarLabel = NSMutableAttributedString(string: objects[i] + ": ", attributes: boldAttribute)
-            var customVarText = NSMutableAttributedString(string: selectedFeedback!.customVars[objects[i]] as! String + "\n")
+            var customVarText = NSMutableAttributedString(string: selectedFeedback!.customVars[objects[i]] as! String + "\n", attributes: regularAttribute)
             customVarLabel.appendAttributedString(customVarText)
             customVarsFullLabel.appendAttributedString(customVarLabel)
         }
-        feedbackCustomVars.attributedText = customVarsFullLabel
+        attributedText.appendAttributedString(customVarsFullLabel)
         
+        self.textView.attributedText = attributedText
         
-        
-//        for customVar in selectedFeedback!.customVars {
-//            println(customVar)
-//            
-//        }
+
         
     }
 
