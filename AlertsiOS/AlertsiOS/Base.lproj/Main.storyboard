@@ -63,7 +63,7 @@
         <scene sceneID="xAI-y2-N2q">
             <objects>
                 <navigationController id="gXU-Bp-P62" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="y6R-bW-Trp"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Tab-Settings" id="y6R-bW-Trp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nln-SS-yJc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,7 +80,7 @@
         <scene sceneID="y05-Fb-0em">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AG2-EZ-YeP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alerts" id="4S2-bS-sOG"/>
+                    <tabBarItem key="tabBarItem" title="Alerts" image="Tab-Alerts" id="4S2-bS-sOG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bGZ-zT-xwf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7cj-uZ-IAV">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7cj-uZ-IAV">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cj-uZ-IAV" id="77b-1X-Mx1">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -126,7 +126,7 @@
         <scene sceneID="5Kp-dw-d46">
             <objects>
                 <navigationController id="5PG-V7-Gmt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lists" id="PFC-AR-Tjj"/>
+                    <tabBarItem key="tabBarItem" title="Lists" image="Tab-Lists" id="PFC-AR-Tjj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eUU-1H-6Zz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -450,4 +450,9 @@
             <point key="canvasLocation" x="3346" y="395"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tab-Alerts" width="25" height="25"/>
+        <image name="Tab-Lists" width="25" height="25"/>
+        <image name="Tab-Settings" width="25" height="25"/>
+    </resources>
 </document>
