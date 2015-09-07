@@ -30,8 +30,8 @@ class FeedbackViewController: UIViewController {
         
         
         
-        alertEmailSubject.text = selectedFeedback!.comments
-        alertDateTime.text = "07/23/15 - 7:30 PM to 07/23/15 11:45 PM"
+//        alertEmailSubject.text = selectedFeedback!.comments
+//        alertDateTime.text = "07/23/15 - 7:30 PM to 07/23/15 11:45 PM"
         
         var boldAttribute = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)]
         
