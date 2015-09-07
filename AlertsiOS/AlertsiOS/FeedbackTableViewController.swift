@@ -56,6 +56,36 @@ class FeedbackTableViewController: UITableViewController {
         feedbackArray.append(FeedbackSample8)
         feedbackArray.append(FeedbackSample9)
         feedbackArray.append(FeedbackSample10)
+        
+        self.addShareSaveButtonsToRightNav()
+    }
+    
+    func addShareSaveButtonsToRightNav() {
+        let buttonSave = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        buttonSave.frame = CGRectMake(0, 0, 36, 40)
+        buttonSave.setTitle("Save", forState: UIControlState.Normal)
+        buttonSave.addTarget(self, action: "saveButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarButtonSave = UIBarButtonItem(customView: buttonSave)
+        
+        let buttonShare = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        buttonShare.frame = CGRectMake(60, 0, 60, 40)
+        buttonShare.setTitle("Share", forState: UIControlState.Normal)
+        buttonShare.addTarget(self, action: "shareButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarButtonShare = UIBarButtonItem(customView: buttonShare)
+        
+        self.navigationItem.setRightBarButtonItems([rightBarButtonSave, rightBarButtonShare], animated: true)
+    }
+    
+    func addSaveButtonToRightNav() {
+        let buttonSave = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+    }
+    
+    func shareButtonAction() {
+        println("Share Button tapped")
+    }
+    
+    func saveButtonAction() {
+        println("Save Button tapped")
     }
 
     override func didReceiveMemoryWarning() {
