@@ -93,7 +93,7 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
         var objects = selectedFeedback!.customVars.allKeys as! [String]
         objects = (selectedFeedback!.customVars.allKeys as! [String]).sorted(<)
         for var i = 0; i < objects.count; ++i {
-            var customVarLabel = NSMutableAttributedString(string: objects[i] + ": ", attributes: boldAttribute)
+            var customVarLabel = NSMutableAttributedString(string: objects[i] + ": ", attributes: regularAttribute)
             var customVarText = NSMutableAttributedString(string: selectedFeedback!.customVars[objects[i]] as! String + "\n", attributes: regularAttribute)
             customVarLabel.appendAttributedString(customVarText)
             customVarsFullLabel.appendAttributedString(customVarLabel)

@@ -17,7 +17,7 @@ class FeedbackTableViewController: UITableViewController {
     
     var sampleURL : NSURL = NSURL(string: "http://www.opinionlab.com")!
     
-    var sampleCustomVars: NSDictionary = ["username": "abc123xyz", "tealeafID": "123456790", "omnitureID": "0987654321", "customVariable4": "testing 123", "customVariable5": "etc etc etc", "customVariable6": "etc etc etc", "customVariable7": "etc etc etc", "customVariable8": "etc etc etc", "customVariable9": "etc etc etc", "customVariable10": "etc etc etc", "customVariable11": "etc etc etc", "customVariable12": "etc etc etc", "customVariable13": "etc etc etc", "customVariable14": "etc etc etc", "customVariable15": "etc etc etc", "customVariable16": "etc etc etc"]
+    var sampleCustomVars: NSDictionary = ["username": "abc123xyz", "tealeafID": "123456790", "omnitureID": "0987654321", "cookie4": "testing 123", "cookie5": "etc etc etc", "cookie6": "etc etc etc", "cookie7": "etc etc etc", "cookie8": "etc etc etc", "cookie9": "etc etc etc", "cookie10": "etc etc etc", "cookie11": "etc etc etc", "cookie12": "etc etc etc", "cookie13": "etc etc etc", "cookie14": "etc etc etc", "cookie15": "etc etc etc", "cookie16": "etc etc etc"]
     
     var sampleComment = "This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment."
     

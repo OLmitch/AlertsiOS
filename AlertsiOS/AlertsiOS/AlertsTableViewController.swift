@@ -51,6 +51,18 @@ class AlertsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! AlertsTableViewHeaderCell
+        
+        headerCell.unreadMessagesText?.text = "10 unread alerts, 2 urgent"
+        
+        return headerCell
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 46
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -70,7 +82,12 @@ class AlertsTableViewController: UITableViewController {
         
         cell.emailSubject?.text = alert.emailSubject
         cell.dateTime?.text = "07/23/15 10:30PM - 07/23/15 11:45PM"
-        cell.notificationIcon?.text = "\u{f071}"
+        
+        if indexPath.row == 0 || indexPath.row == 1 {
+            cell.notificationIcon?.text = "\u{f071}"
+        } else {
+            cell.notificationIcon?.text = "\u{f111}"
+        }
 
         return cell
     }
@@ -115,7 +132,7 @@ class AlertsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "Show Feedback List" {
+        if segue.identifier == "Show Feedback Table" {
             let feedbackTableViewController = segue.destinationViewController as! FeedbackTableViewController
             
             if let index = self.tableView.indexPathForSelectedRow() {
