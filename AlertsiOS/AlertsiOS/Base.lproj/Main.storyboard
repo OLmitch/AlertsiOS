@@ -318,6 +318,39 @@
             </objects>
             <point key="canvasLocation" x="2659" y="395"/>
         </scene>
+        <!--Alerts Web View Controller-->
+        <scene sceneID="QlH-jv-BSP">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="euR-2Y-szB" customClass="AlertsWebViewController" customModule="AlertsiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qye-Io-aXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="o1F-fx-9Iq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XdO-yR-YMY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRS-0f-Zg6">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DRS-0f-Zg6" firstAttribute="top" secondItem="Qye-Io-aXh" secondAttribute="bottom" id="ksN-jh-3RR"/>
+                            <constraint firstAttribute="trailing" secondItem="DRS-0f-Zg6" secondAttribute="trailing" id="mit-p2-NPg"/>
+                            <constraint firstItem="DRS-0f-Zg6" firstAttribute="leading" secondItem="XdO-yR-YMY" secondAttribute="leading" id="qKY-s6-RI8"/>
+                            <constraint firstItem="o1F-fx-9Iq" firstAttribute="top" secondItem="DRS-0f-Zg6" secondAttribute="bottom" id="tNB-Yt-jG2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="DRS-0f-Zg6" id="Fjt-Ed-T7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bf-yh-fnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4034" y="395"/>
+        </scene>
         <!--Feedback View Controller-->
         <scene sceneID="bYq-rT-uUQ">
             <objects>
@@ -349,6 +382,7 @@
                     </view>
                     <connections>
                         <outlet property="textView" destination="qNj-wX-tCE" id="4vO-nB-jZF"/>
+                        <segue destination="euR-2Y-szB" kind="show" identifier="Show Alerts Web View" id="jkg-Uh-P3c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zp-o5-Lng" userLabel="First Responder" sceneMemberID="firstResponder"/>

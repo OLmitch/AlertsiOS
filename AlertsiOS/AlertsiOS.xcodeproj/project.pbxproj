@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81018C441B9E30FF0044E023 /* ListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81018C431B9E30FF0044E023 /* ListsTableViewController.swift */; };
+		81018C481B9E600B0044E023 /* AlertsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81018C471B9E600B0044E023 /* AlertsWebViewController.swift */; };
 		810B061D1B9558E6004CB49B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811078151B60CA6100F90C30 /* Main.storyboard */; };
 		810B061F1B955C0D004CB49B /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B061E1B955C0D004CB49B /* FeedbackTableViewController.swift */; };
 		810B06211B955F01004CB49B /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B06201B955F01004CB49B /* Feedback.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		81018C431B9E30FF0044E023 /* ListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewController.swift; sourceTree = "<group>"; };
+		81018C471B9E600B0044E023 /* AlertsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertsWebViewController.swift; path = ../AlertsWebViewController.swift; sourceTree = "<group>"; };
 		810B061E1B955C0D004CB49B /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewController.swift; sourceTree = "<group>"; };
 		810B06201B955F01004CB49B /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		810B06221B95618C004CB49B /* FeedbackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				810FDCBF1B98030800B39BD0 /* FeedbackViewHeaderCell.swift */,
 				81018C431B9E30FF0044E023 /* ListsTableViewController.swift */,
 				811078351B60CAFD00F90C30 /* SettingsTableViewController.swift */,
+				81018C471B9E600B0044E023 /* AlertsWebViewController.swift */,
 				811078181B60CA6100F90C30 /* Images.xcassets */,
 				8110781A1B60CA6100F90C30 /* LaunchScreen.xib */,
 				8110780F1B60CA6100F90C30 /* Supporting Files */,
@@ -250,6 +253,7 @@
 				81018C441B9E30FF0044E023 /* ListsTableViewController.swift in Sources */,
 				810FDCBE1B97FF0500B39BD0 /* FeedbackViewController.swift in Sources */,
 				811078381B60CAFD00F90C30 /* AlertsTableViewController.swift in Sources */,
+				81018C481B9E600B0044E023 /* AlertsWebViewController.swift in Sources */,
 				810B06231B95618C004CB49B /* FeedbackTableViewCell.swift in Sources */,
 				810B061F1B955C0D004CB49B /* FeedbackTableViewController.swift in Sources */,
 				810FDCC01B98030800B39BD0 /* FeedbackViewHeaderCell.swift in Sources */,

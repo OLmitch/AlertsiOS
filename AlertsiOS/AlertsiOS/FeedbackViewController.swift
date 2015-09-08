@@ -12,6 +12,7 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
     
     var selectedAlert: Alert?
     var selectedFeedback: Feedback?
+    var selectedURL: NSURL?
     
     @IBOutlet weak var textView: UITextView!
     
@@ -82,11 +83,11 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
         attributedText.appendAttributedString(currentURLLabel)
         attributedText.appendAttributedString(linebreakText)
         
-        var refererLabel = NSMutableAttributedString(string: "Referer: ", attributes: boldAttribute)
-        var refererText = NSMutableAttributedString(string: selectedFeedback!.referer.absoluteString! + "\n", attributes: regularAttribute)
-        refererLabel.appendAttributedString(refererText)
-        attributedText.appendAttributedString(refererLabel)
-        attributedText.appendAttributedString(linebreakText)
+//        var refererLabel = NSMutableAttributedString(string: "Referer: ", attributes: boldAttribute)
+//        var refererText = NSMutableAttributedString(string: selectedFeedback!.referer.absoluteString! + "\n", attributes: regularAttribute)
+//        refererLabel.appendAttributedString(refererText)
+//        attributedText.appendAttributedString(refererLabel)
+//        attributedText.appendAttributedString(linebreakText)
 
         var customVarsFullLabel = NSMutableAttributedString(string: "Custom Variables \n", attributes: boldAttribute)
         var objects = selectedFeedback!.customVars.allKeys as! [String]
@@ -105,7 +106,8 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
-        println("oqweuiroiqweur")
+        self.selectedURL = URL
+        performSegueWithIdentifier("Show Alerts Web View", sender: nil)
         return false
     }
     
@@ -114,14 +116,16 @@ class FeedbackViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Show Alerts Web View" {
+            let alertsWebViewController = segue.destinationViewController as! AlertsWebViewController
+            alertsWebViewController.selectedURL = self.selectedURL
+        }
+        
     }
-    */
 
 }
