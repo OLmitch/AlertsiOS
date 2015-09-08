@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController {
+class FeedbackViewController: UIViewController, UITextViewDelegate {
     
     var selectedAlert: Alert?
     var selectedFeedback: Feedback?
@@ -46,6 +46,8 @@ class FeedbackViewController: UIViewController {
         
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 12, 16, 12)
         self.textView.scrollRangeToVisible(NSMakeRange(0, 0))
+        
+        self.textView.dataDetectorTypes = UIDataDetectorTypes.Link
         
         var boldAttribute = [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)]
         var regularAttribute = [NSFontAttributeName: UIFont.systemFontOfSize(14)]
@@ -99,10 +101,14 @@ class FeedbackViewController: UIViewController {
         
         self.textView.attributedText = attributedText
         
-
-        
+        self.textView.delegate = self
     }
-
+    
+    func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
+        println("oqweuiroiqweur")
+        return false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
