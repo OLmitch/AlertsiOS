@@ -3,7 +3,7 @@
 //  OpinionLabAlerts
 //
 //  Created by Mitchell Downey on 7/22/15.
-//  Copyright (c) 2015 Mitchell Downey. All rights reserved.
+//  Copyright (c) 2015 OpinionLab. All rights reserved.
 //
 
 import UIKit
