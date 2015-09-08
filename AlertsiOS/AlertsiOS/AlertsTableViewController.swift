@@ -54,7 +54,7 @@ class AlertsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! AlertsTableViewHeaderCell
         
-        headerCell.unreadMessagesText?.text = "10 unread alerts, 2 urgent"
+        headerCell.unreadMessagesText?.text = "5 unread alerts, 2 urgent"
         
         return headerCell
     }
@@ -83,10 +83,14 @@ class AlertsTableViewController: UITableViewController {
         cell.emailSubject?.text = alert.emailSubject
         cell.dateTime?.text = "07/23/15 10:30PM - 07/23/15 11:45PM"
         
-        if indexPath.row == 0 || indexPath.row == 1 {
+        if indexPath.row == 0 || indexPath.row == 3 {
             cell.notificationIcon?.text = "\u{f071}"
-        } else {
+        } else if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 4 {
             cell.notificationIcon?.text = "\u{f111}"
+        } else if indexPath.row == 5 {
+            cell.notificationIcon?.text = "\u{f12a}"
+        } else {
+            cell.notificationIcon?.text = "\u{f10c}"
         }
 
         return cell
